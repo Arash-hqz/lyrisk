@@ -16,7 +16,10 @@ export const ShazamApi = createApi({
                 url: '/top_tracks_country',
             })
         }),
+        getSongDetail: builder.query({ 
+            query: ({ songId }) => ({  url: `/songs/${songId}` })
+        }),
     }),
 });
 
-export const { useGetTopChartsQuery } = ShazamApi;
+export const { useGetTopChartsQuery , usegetSongDetail } = ShazamApi;
