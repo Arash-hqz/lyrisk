@@ -64,7 +64,7 @@ const TopPlay = () =>{
   const handlePauseClick = () => {
     dispatch(playPause(false));
   }
-  const handlePlayClick = () => {
+  const handlePlayClick = (song , i) => {
     dispatch(setActiveSong({ song , i , data}));
     dispatch(playPause(true))
   }
@@ -90,7 +90,7 @@ const TopPlay = () =>{
             isPlaying={isPlaying}
             activeSong={activeSong}
             handlePauseClick={handlePauseClick}
-            handlePlayClick={FaHeadphonesAlt}
+            handlePlayClick={() =>handlePlayClick(song , i)}
             />
           )) || "EROR"} */}
         </div>
