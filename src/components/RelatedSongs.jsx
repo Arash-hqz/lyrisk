@@ -1,7 +1,12 @@
 import SongBar from "./SongBar";
 
-const RelatedSongs = () => (
-  <div>Loader</div>
-);
+const RelatedSongs = ( data , isPlaying , activeSong , handlePauseClick , handlePlayClick ) => {
+  
+  return(
+  <div className="flex flex-col">
+    <h1 className="font-bold text-3xl text-white"> Related songs: </h1>
+  </div>
+  )
+};
 
 export default RelatedSongs;
